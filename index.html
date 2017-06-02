@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hub Finder</title>
+    <script src="js/vendor/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="hubfinder.js"></script>
+    <style>
+        span.list {
+            float: left;
+            padding: 25px;
+        }
+        
+        div {
+            clear: both;
+        }
+        
+        textarea.inputlist {
+            height: 100px;
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Hub Finder</h2>
+    <span class="list">
+        <h3>Hub Addresses (one per line)</h3>
+        <textarea class="inputlist" id="hublist"></textarea>
+    </span>
+    <span class="list">
+        <h3>Addresses to Find (one per line)</h3>
+        <textarea class="inputlist" id="addresslist"></textarea>
+    </span>
+    <div>
+        <input type="button" id="findhubsbutton" value="Find Hubs" />
+    </div>
+    <div class="results">
+        <h2>Results</h2>
+        <div id="results"></div>
+    </div>
+</body>
+
+</html>
