@@ -30,7 +30,7 @@ $(document).ready(function() {
                 originAddress = response.originAddresses[i];
                 $("#results").append("<div class='hubresult'><div id='hubaddress_" + i + "' style='font-weight: bold;'>" + originAddress + "</div>");
                 mapID = "map_" + i;
-                $("#results").append("<div id='" + mapID + "' style='width: 300px; height: 300px;'></div>");
+                $("#results").append("<div class='map' id='" + mapID + "' style='width: 300px; height: 300px;'></div>");
                 maps[i] = new google.maps.Map(document.getElementById(mapID), {
                     center: { lat: 0.0, lng: 0.0 },
                     zoom: 10
@@ -49,7 +49,7 @@ $(document).ready(function() {
                     return a['distance_value'] - b['distance_value'];
                 });
                 var destinationAddressTableOutput = "";
-                destinationAddressTableOutput += "<table id='addresstable_" + i + "'>";
+                destinationAddressTableOutput += "<table class='hubtable' id='addresstable_" + i + "'>";
                 destinationAddressTableOutput += "<thead><tr><th>Hub #</th><th>Hub</th><th>Distance</th></tr></thead>";
                 destinationAddressTableOutput += "<tbody>";
                 for (j = 0; j < destinationAddresses.length; j++) {
@@ -76,7 +76,6 @@ $(document).ready(function() {
                 bounds.extend(marker.position);
                 map.setCenter(bounds.getCenter());
                 map.fitBounds(bounds);
-                alert(bounds.getSouthWest() + " " + bounds.getNorthEast());
             } else {
                 $('#' + mapID).text("The map could not be created");
             }
