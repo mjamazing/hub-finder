@@ -7,18 +7,58 @@
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript" src="js/application/hubfinder.js"></script>
     <style>
-        span.list {
-            float: left;
-            padding: 25px;
+        h2 {
+            background-color: #0000cc;
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 24px;
+            border-radius: 5px;
+            padding: 5px;
+            margin-bottom: 0px;
+            width: 95%;
         }
         
-        div {
+        h3 {
+            background-color: #6666cc;
+            color: #ffffff;
+            border-radius: 5px;
+            font-family: Arial;
+            font-size: 18px;
+            padding: 5px;
+        }
+        
+        span.list {
+            float: left;
+            padding: 10px;
+        }
+        
+        div#button,
+        div#results,
+        div#hubresult,
+        div#map {
             clear: both;
         }
         
         textarea.inputlist {
+            border-radius: 5px;
+            padding: 5px;
             height: 100px;
             width: 400px;
+        }
+        
+        input#findhubsbutton {
+            border-radius: 5px;
+            margin: 5px;
+            padding: 5px;
+            height: 40px;
+            width: 90px;
+            font-size: 14px;
+            font-family: Arial;
+        }
+        
+        th,
+        td {
+            border-bottom: 1px solid #ddd;
         }
     </style>
 </head>
@@ -33,7 +73,7 @@
         <h3>Hub Addresses (one per line)</h3>
         <textarea class="inputlist" id="hublist"></textarea>
     </span>
-    <div>
+    <div id="button">
         <input type="button" id="findhubsbutton" value="Find Hubs" />
     </div>
     <div class="results">
