@@ -23,7 +23,7 @@ $(document).ready(function() {
             $('#results').html("A parsing error has occurred.");
         } else {
             var maps = new Array();
-            for (i = 0; i < 1; i++) {
+            for (i = 0; i < response.originAddresses.length; i++) {
                 originAddress = '';
                 destinationAddresses = [];
                 // distance = 0;
