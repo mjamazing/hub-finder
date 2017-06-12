@@ -1,0 +1,53 @@
+h2 {
+    background-color: #0000cc;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 24px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 0px;
+    width: 95%;
+}
+
+h3 {
+    background-color: #6666cc;
+    color: #ffffff;
+    border-radius: 5px;
+    font-family: Arial;
+    font-size: 18px;
+    padding: 5px;
+}
+
+span.list {
+    float: left;
+    padding: 10px;
+}
+
+div#button,
+div#results,
+div#hubresult,
+div#map {
+    clear: both;
+}
+
+textarea.inputlist {
+    border-radius: 5px;
+    padding: 5px;
+    height: 100px;
+    width: 400px;
+}
+
+input#findhubsbutton {
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    height: 40px;
+    width: 90px;
+    font-size: 14px;
+    font-family: Arial;
+}
+
+th,
+td {
+    border-bottom: 1px solid #ddd;
+}
