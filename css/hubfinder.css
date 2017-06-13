@@ -52,16 +52,7 @@ textarea.inputlist {
     width: 400px;
 }
 
-input.drawmapbutton {
-    border-radius: 5px;
-    margin: 5px;
-    padding: 5px;
-    height: 40px;
-    width: 90px;
-    font-size: 14px;
-    font-family: Arial;
-}
-
+input.drawmapbutton,
 input#findhubsbutton {
     border-radius: 5px;
     margin: 5px;
