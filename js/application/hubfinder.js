@@ -27,7 +27,6 @@ $(document).ready(function() {
                 originAddress = '';
                 destinationAddresses = [];
                 mapID = 'map_' + i;
-                // distance = 0;
                 originAddress = response.originAddresses[i];
                 $("#results").append("<div class='hubresult'><div id='hubaddress_" + i + "' style='font-weight: bold;'>" + originAddress + "</div>");
 
@@ -60,9 +59,6 @@ $(document).ready(function() {
     function drawMap(mapID, originAddress, destinationAddresses) {
         // mapID = "map_" + element;
         mapElement = document.getElementById(mapID);
-        // $("#" + mapID).css("width", 300);
-        // $("#" + mapID).css("height", 300);
-        // ("<div class='map' id='" + mapID + "' style='width: 300px; height: 300px;'></div>");
         var map = new google.maps.Map(mapElement, {
             center: { lat: 0.0, lng: 0.0 },
             zoom: 10
