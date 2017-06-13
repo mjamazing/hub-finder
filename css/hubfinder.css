@@ -18,16 +18,31 @@ h3 {
     padding: 5px;
 }
 
-span.list {
+span.list,
+span.map,
+table.hubtable {
     float: left;
     padding: 10px;
 }
 
-div#button,
-div#results,
-div#hubresult,
-div#map {
+span.map {
+    width: 300px;
+    height: 300px;
+}
+
+th,
+td {
+    border-bottom: 1px solid #ddd;
+}
+
+div.button,
+div.results,
+div.hubresult {
     clear: both;
+}
+
+div.hubresult {
+    margin-top: 10px;
 }
 
 textarea.inputlist {
@@ -35,6 +50,16 @@ textarea.inputlist {
     padding: 5px;
     height: 100px;
     width: 400px;
+}
+
+input.drawmapbutton {
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    height: 40px;
+    width: 90px;
+    font-size: 14px;
+    font-family: Arial;
 }
 
 input#findhubsbutton {
@@ -45,9 +70,4 @@ input#findhubsbutton {
     width: 90px;
     font-size: 14px;
     font-family: Arial;
-}
-
-th,
-td {
-    border-bottom: 1px solid #ddd;
 }
