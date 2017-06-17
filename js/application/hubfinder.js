@@ -39,6 +39,7 @@ $(document).ready(function() {
                 destinationAddresses.sort(function(a, b) {
                     return a['distance_value'] - b['distance_value'];
                 });
+                var sortedAddresses = $.map(destinationAddresses, function(a) { return a['address']; });
                 var destinationAddressTableOutput = "";
                 destinationAddressTableOutput += "<table class='hubtable' id='addresstable_" + i + "'>";
                 destinationAddressTableOutput += "<thead><tr><th>Hub #</th><th>Hub</th><th>Distance</th></tr></thead>";
@@ -49,7 +50,7 @@ $(document).ready(function() {
                 destinationAddressTableOutput += "</tbody></table>";
                 $("#results").append(destinationAddressTableOutput);
                 $("#results").append("<span class='map' id='" + mapID + "'><input class='drawmapbutton' id='drawmap_" + i + "' type='button' value='Show Map'/></span>");
-                $("#drawmap_" + i).click({ mapID: mapID, originAddress: originAddress, destinationAddresses: response.destinationAddresses }, function(event) {
+                $("#drawmap_" + i).click({ mapID: mapID, originAddress: originAddress, destinationAddresses: sortedAddresses }, function(event) {
                     drawMap(event.data.mapID, event.data.originAddress, event.data.destinationAddresses);
                 });
             }
